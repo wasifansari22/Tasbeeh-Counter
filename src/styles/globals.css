@@ -1,0 +1,73 @@
+@import "./variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    /* colors */
+    --primary: #22c55e;
+    --primary-hover: #16a34a;
+
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-hover: #273449;
+
+    --text: #f8fafc;
+    --text-secondary: #cbd5e1;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    /* card */
+    --card-radius: 24px;
+    --card-padding: 1.5rem;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+
+    /* buttons */
+    --button-radius: 14px;
+
+    /* input */
+    --input-radius: 12px;
+
+    /* animation */
+    --transition: 0.3s ease;
+
+    /* spacing */
+    --page-gap: 1.5rem;
+
+    --space-xs: .5rem;
+    --space-sm: .75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+}

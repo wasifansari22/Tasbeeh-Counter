@@ -1,0 +1,37 @@
+.card {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item span {
+    font-size: 1.8rem;
+}
+
+.item h2 {
+    color: white;
+    margin: 8px 0 4px;
+    font-size: 1.5rem;
+}
+
+.item p {
+    color: #9ca3af;
+    font-size: .9rem;
+}
+
+/* mobile view */
+@media (max-width: 480px) {
+    .item p {
+        color: #9ca3af;
+        font-size: .65rem;
+    }
+}

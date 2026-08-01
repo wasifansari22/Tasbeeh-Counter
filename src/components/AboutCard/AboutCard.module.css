@@ -1,0 +1,149 @@
+.card {
+    max-width: 700px;
+    margin: auto;
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.header {
+    text-align: center;
+}
+
+/* .logo {
+    font-size: 3rem;
+    margin-bottom: .6rem;
+} */
+
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.05) 70%, transparent 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glow 2.5s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.icon {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px #22c55e);
+    }
+
+    50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 18px #22c55e);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px #22c55e);
+    }
+}
+
+.header h2 {
+    font-size: 2rem;
+    margin-top: -16px;
+    margin-bottom: .25rem;
+}
+
+.header p {
+    color: var(--text-secondary);
+}
+
+.version {
+    display: inline-block;
+    margin-top: .8rem;
+    padding: .3rem .8rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .08);
+    font-size: .85rem;
+}
+
+.description {
+    text-align: center;
+    line-height: 1.7;
+    color: var(--text-secondary)
+}
+
+.features {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.feature {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    padding: 1rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .05);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, .08);
+}
+
+.icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.feature h4 {
+    margin-bottom: .3rem;
+}
+
+.feature p {
+    color: var(--text-secondary);
+}
+
+.footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.dua {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* mobile responsive */
+@media(max-width:768px) {
+    .card {
+        padding: var(--card-padding);
+    }
+
+    .logo {
+        font-size: 2.4rem;
+    }
+
+    .header h2 {
+        font-size: 1.7rem;
+    }
+
+}

@@ -1,0 +1,5 @@
+loadStreak()
+saveStreak()
+isSameDay()
+isYesterday()
+updateStreak()

@@ -1,0 +1,40 @@
+.card {
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: 1rem;
+}
+
+.emoji {
+    font-size: 1.4rem;
+}
+
+.header h3 {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.text {
+    line-height: 1.7;
+    font-size: .98rem;
+    color: white;
+}
+
+.reference {
+    display: block;
+    margin-top: 1rem;
+    color: #9ca3af;
+    font-size: .85rem;
+    text-align: right;
+
+}

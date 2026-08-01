@@ -1,0 +1,32 @@
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+    /* margin-top: 20px; */
+}
+
+.heading {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #f3f4f6;
+    font-style: italic;
+}
+
+.source {
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,17 @@
+.app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: min(480px, 100%);
+    background: #101826;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+    padding: 30px;
+    /* margin-bottom: 50px; */
+}
