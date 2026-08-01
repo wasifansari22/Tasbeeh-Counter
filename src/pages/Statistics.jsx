@@ -12,7 +12,7 @@ const Statistics = (props) => {
   return (
     <>
       <div className={styles.container}>
-        <Header />
+        {/* <Header /> */}
         <h2 className={styles.heading}>📊 Statistics</h2>
 
         <StatisticsSummary
