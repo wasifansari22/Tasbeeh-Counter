@@ -29,22 +29,22 @@ const AchievementCard = ({ unlockedAchievements }) => {
                         <span className={styles.icon}>
                             {achievement.icon}
                         </span>
-                        <div style={{ flex: 1 }}>
+
+                        <div className={styles.content}>
                             <h4>{achievement.title}</h4>
                             <p>{achievement.description}</p>
+
+                            <span
+                                className={
+                                    unlocked
+                                        ? styles.badgeUnlocked
+                                        : styles.badgeLocked
+                                }
+                            >
+                                {unlocked ? "Unlocked" : "Locked"}
+                            </span>
                         </div>
 
-                        <span
-                            className={
-                                unlocked ? styles.badgeUnlocked : styles.badgeLocked
-                            }
-                        >
-                            {unlocked ? "Unlocked" : "Locked"}
-                        </span>
-
-                        {/* <span>
-                            {unlocked ? "✅" : "🔒"}
-                        </span> */}
                     </motion.div>
                 );
             })}
