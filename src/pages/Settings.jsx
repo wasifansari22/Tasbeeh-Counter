@@ -8,8 +8,6 @@ const Settings = (props) => {
                 settings={props.settings}
                 setSettings={props.setSettings}
                 onReset={props.onReset}
-            // showResetModal={props.showResetModal}
-            // setShowResetModal={props.setShowResetModal}
             />
         </>
     )

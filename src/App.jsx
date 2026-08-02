@@ -390,18 +390,9 @@ const App = () => {
         }
     }, [activeDhikr]);
 
-
-    // console.log(activeDhikr);  -- for testing
     return (
         <>
             <Layout>
-
-                {/* render the reminder conditionally */}
-                {settings.dailyReminder && (
-                    <DailyReminder reminder={todayReminder} />
-                )}
-
-                {/* Routes for navigations */}
                 <Routes>
                     <Route
                         path="/"
@@ -422,6 +413,8 @@ const App = () => {
                             setShowCelebration={setShowCelebration}
                             newAchievement={newAchievement}
                             setNewAchievement={setNewAchievement}
+                            settings={settings}
+                            todayReminder={todayReminder}
                         />}
                     />
 

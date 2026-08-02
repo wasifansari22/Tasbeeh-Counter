@@ -1,40 +1,65 @@
 .card {
-    margin: 1.5rem 0;
-    padding: 1.2rem;
+    position: relative;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border-radius: 18px;
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--card-shadow);
 }
 
 .header {
     display: flex;
     align-items: center;
-    gap: .6rem;
-    margin-bottom: 1rem;
+    gap: 10px;
+
+    margin-bottom: 8px;
 }
 
 .emoji {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .header h3 {
-    color: var(--primary);
-    font-size: 1rem;
+    margin: 0;
+    font-size: .95rem;
+    color: white;
 }
 
 .text {
-    line-height: 1.7;
-    font-size: .98rem;
-    color: white;
+    margin: 0;
+    line-height: 1.5;
+    font-size: .9rem;
 }
 
 .reference {
     display: block;
-    margin-top: 1rem;
-    color: #9ca3af;
-    font-size: .85rem;
+    margin-top: 8px;
+    font-size: .75rem;
+    opacity: .8;
     text-align: right;
+}
 
+.closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.closeBtn:hover {
+    /* background: rgba(255, 255, 255, .15); */
+    background: #22c55e;
+    transform: rotate(90deg);
 }

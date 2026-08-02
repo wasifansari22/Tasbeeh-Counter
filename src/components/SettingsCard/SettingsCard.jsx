@@ -24,7 +24,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
     return (
         <>
             <section className={styles.card}>
-
                 <h3 className={styles.heading}>⚙️ Settings</h3>
 
                 {/* vibrate */}
@@ -81,14 +80,15 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                 {/* sound */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
-                        <h4>🔊 Sound Effects</h4>
+                        <h4>🔊 Sound Effects - <span style={{ color: "#22c55e", fontSize: "1rem" }}>Coming Soon</span></h4>
                         <p>Play a soft click sound while counting.</p>
                     </div>
 
                     <label className={styles.switch}>
                         <input
                             type="checkbox"
-                            checked={settings.sound}
+                            // checked={settings.sound}
+                            checked={false}
                             onChange={() => toggleSetting("sound")}
                         />
                         <span className={styles.slider}></span>
@@ -98,14 +98,15 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                 {/* theme */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
-                        <h4>🌙 Dark Theme</h4>
+                        <h4>🌙 Dark Theme - <span style={{ color: "#22c55e", fontSize: "1rem" }}>Coming Soon</span></h4>
                         <p>Use dark appearance throughout the app.</p>
                     </div>
 
                     <label className={styles.switch}>
                         <input
                             type="checkbox"
-                            checked={settings.darkTheme}
+                            // checked={settings.darkTheme}
+                            checked={false}
                             onChange={() => toggleSetting("darkTheme")}
                         />
                         <span className={styles.slider}></span>
