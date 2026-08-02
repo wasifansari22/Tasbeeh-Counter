@@ -13,7 +13,7 @@ const ResetButton = ({ onReset }) => {
             <div className={styles.wrapper}>
                 <button onClick={() => setShowModal(true)} className={styles.button}>
                     <FaRotateLeft />
-                    <span>Reset Session</span>
+                    <span>Reset Count</span>
                 </button>
             </div>
 

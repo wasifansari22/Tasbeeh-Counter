@@ -27,7 +27,7 @@ const CountButton = ({ onCount, isCompleted }) => {
                     <>
                         <FaCheck />
                         &nbsp;
-                        Completed
+                        Target Completed
                     </>
                 ) : (
                     "Tap to Count"
