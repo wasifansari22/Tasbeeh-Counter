@@ -7,10 +7,6 @@ import React from 'react'
 // sending props here from the App.jsx </CountButton/>
 const CountButton = ({ onCount, isCompleted }) => {
     const handleClick = () => {
-        // tiny vibration on supported devices
-        // if (navigator.vibrate) {
-        //     navigator.vibrate(20);
-        // }
         onCount();
     }
     return (
@@ -19,7 +15,7 @@ const CountButton = ({ onCount, isCompleted }) => {
                 onClick={handleClick}
                 className={`${styles.button} ${isCompleted ? styles.completed : ""}`}
                 disabled={isCompleted}
-                whileTap={!isCompleted ? { scale: 0.93 } : {}}
+                whileTap={!isCompleted ? { scale: 0.96, y: 2 } : {}}
                 whileHover={!isCompleted ? { scale: 1.02 } : {}}
                 transition={{
                     type: "spring",
