@@ -7,7 +7,7 @@ const CounterCircle = ({ count, target }) => {
     // const percentage = Math.round((count / target) * 100);
     const percentage = target > 0 ? Math.min(Math.round((count / target) * 100), 100) : 0;
     const progress = Math.min(count / target, 1);
-    const radius = 90;
+    const radius = 78;
     const circumference = 2 * Math.PI * radius;
     const offset = circumference - progress * circumference;
     const isCompleted = count >= target;
@@ -16,8 +16,8 @@ const CounterCircle = ({ count, target }) => {
         <section className={styles.wrapper}>
             <svg
                 className={styles.svg}
-                width="220"
-                height="220"
+                width="190"
+                height="190"
             >
                 {/* gradient definition */}
                 <defs>
@@ -30,16 +30,16 @@ const CounterCircle = ({ count, target }) => {
                 {/* background circle */}
                 <circle
                     className={styles.bgCircle}
-                    cx="110"
-                    cy="110"
+                    cx="95"
+                    cy="95"
                     r={radius}
                 />
 
                 {/* animated progress */}
                 <motion.circle
                     className={`${styles.progressCircle} ${isCompleted ? styles.completedRing : ""}`}
-                    cx="110"
-                    cy="110"
+                    cx="95"
+                    cy="95"
                     r={radius}
                     stroke="url(#gradient)"
                     strokeDasharray={circumference}
