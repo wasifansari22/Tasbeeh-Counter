@@ -14,10 +14,11 @@
 }
 
 .heading {
-    margin-bottom: var(--space-lg);
-    font-size: 1.35rem;
+    margin-bottom: 24px;
+    font-size: 1.45rem;
     font-weight: 700;
     color: var(--text);
+    text-align: center;
 }
 
 .settings {
@@ -50,8 +51,8 @@
 }
 
 .info p {
-    margin-top: 5px;
-    font-size: .82rem;
+    margin-top: 3px;
+    font-size: .8rem;
     line-height: 1.45;
     color: var(--text-secondary);
 }
@@ -104,9 +105,11 @@
 
 /* reset progress */
 .resetSection {
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid rgba(255, 255, 255, .08);
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 16px;    
+    background: rgba(220, 38, 38, .08);
+    border: 1px solid rgba(220, 38, 38, .18);
 }
 
 .resetSection h4 {
