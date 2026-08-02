@@ -1,7 +1,7 @@
 .card {
     background: var(--card-light);
     border: 1px solid var(--border);
-    padding: var(--card-padding);
+    padding: 14px 16px;
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
     /* margin-bottom: var(--space-lg); */
@@ -26,13 +26,13 @@
 }
 
 .btn {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.35rem;
     border-radius: var(--button-radius);
     transition: var(--transition);
     background: var(--primary);
     color: var(--text);
-    font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -50,14 +50,14 @@
 }
 
 .input {
-    width: 90px;
-    height: 48px;
+    width: 82px;
+    height: 44px;
+    font-size: 1.1rem;
     background: var(--card);
     color: var(--text);
     border: 1px solid var(--border);
     border-radius: var(--input-radius);
     text-align: center;
-    font-size: 1.2rem;
     font-weight: 600;
     outline: none;
     transition: var(--transition);
@@ -69,7 +69,6 @@
 }
 
 /* hide arrows */
-
 .input::-webkit-outer-spin-button,
 .input::-webkit-inner-spin-button {
     appearance: none;
@@ -78,21 +77,6 @@
 
 .input[type="number"] {
     appearance: textfield;
-}
-
-@media (max-width:480px) {
-    .controls {
-        gap: 10px;
-    }
-
-    .btn {
-        width: 44px;
-        height: 44px;
-    }
-
-    .input {
-        width: 80px;
-    }
 }
 
 .btn:disabled {
@@ -115,6 +99,7 @@
 .progressHeader span {
     color: var(--primary);
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .progressBar {
@@ -123,7 +108,7 @@
     background: rgba(255, 255, 255, .08);
     border-radius: 999px;
     overflow: hidden;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
 }
 
 .progress {
@@ -134,5 +119,21 @@
 
 .targetHeading {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: .65rem;
+}
+
+
+@media (max-width:480px) {
+    .controls {
+        gap: 10px;
+    }
+
+    .btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .input {
+        width: 80px;
+    }
 }
