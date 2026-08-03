@@ -36,7 +36,7 @@ const Toast = ({ message, show, type }) => {
                             duration: 0.25,
                         }}
                     >
-                        {/* message display with icons*/}
+
                         <div className={styles.content}>
                             <span className={styles.icon}>
                                 {icons[type]}
