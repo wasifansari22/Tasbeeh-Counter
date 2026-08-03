@@ -74,7 +74,6 @@ const AboutCard = () => {
                 ))}
             </div>
 
-            {/* footer */}
             <div className={styles.footer}>
                 <p className={styles.dua}> 🤲 May Allah accept your Dhikr. Ameen.</p>
                 <div className={styles.divider}></div>

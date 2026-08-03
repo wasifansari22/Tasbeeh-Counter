@@ -24,7 +24,7 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
     return (
         <>
             <section className={styles.card}>
-                <h3 className={styles.heading}>Settings</h3>
+                <h3 className={styles.heading}>⚙️ Settings</h3>
 
                 {/* vibrate */}
                 <div className={styles.settings}>
@@ -43,7 +43,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                     </label>
                 </div>
 
-                {/* celebration */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
                         <h4>🎉 Celebration Effects</h4>
@@ -60,7 +59,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                     </label>
                 </div>
 
-                {/* reminder */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
                         <h4>🌿 Daily Reminder</h4>
@@ -77,7 +75,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                     </label>
                 </div>
 
-                {/* sound */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
                         <h4>🔊 Sound Effects - <span style={{ color: "#22c55e", fontSize: "1rem" }}>Coming Soon</span></h4>
@@ -95,7 +92,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                     </label>
                 </div>
 
-                {/* theme */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
                         <h4>🌙 Dark Theme - <span style={{ color: "#22c55e", fontSize: "1rem" }}>Coming Soon</span></h4>
@@ -113,7 +109,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                     </label>
                 </div>
 
-                {/* install card */}
                 <div className={styles.installCard}>
                     <div>
                         <h4>📱 Install App</h4>
@@ -131,7 +126,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                         )}
                         {status === "unsupported" && (
                             <p>Installation isn't available right now. Try to Refresh/Reload the page once.</p>
-                            // Try to Refresh/Reload the page once.
                         )}
                     </div>
 
@@ -145,7 +139,6 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                     )}
                 </div>
 
-                {/* reset section */}
                 <div className={styles.resetSection}>
                     <h4>🗑 Reset Progress</h4>
                     <p>

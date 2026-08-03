@@ -6,7 +6,7 @@ const useInstallPrompt = () => {
 
     useEffect(() => {
         console.log("Install hook mounted");
-        // already installed
+
         if (
             window.matchMedia("(display-mode: standalone)").matches
         ) {
@@ -39,13 +39,6 @@ const useInstallPrompt = () => {
             "appinstalled",
             handleAppInstalled
         );
-
-        // wait a little before deciding it's unsupported
-        // const timer = setTimeout(() => {
-        //     setStatus((prev) =>
-        //         prev === "checking" ? "unsupported" : prev
-        //     );
-        // }, 3000);
 
         return () => {
             console.log("Install hook unmounted");

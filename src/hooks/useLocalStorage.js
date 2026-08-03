@@ -1,4 +1,3 @@
-// custom hook - used for dhikrs, activeDhikrId, streaks, achievements
 import { useEffect, useState } from "react"
 
 const useLocalStorage = (key, initialValue) => {

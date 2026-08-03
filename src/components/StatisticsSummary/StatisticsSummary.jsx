@@ -1,5 +1,5 @@
-import styles from "./StatisticsSummary.module.css";
 import React from 'react'
+import styles from "./StatisticsSummary.module.css";
 
 const StatisticsSummary = ({ lifetimeCount, streak, unlockedAchievements, totalAchievements }) => {
     return (

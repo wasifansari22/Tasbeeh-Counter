@@ -39,7 +39,6 @@
     cursor: pointer;
     padding: 13px;
     font-weight: 600;
-    /* border-radius: 12px; */
     border-radius: var(--button-radius);
     transition: var(--transition);
 }

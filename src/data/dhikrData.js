@@ -23,15 +23,3 @@ const initialDhikrs = [
 ];
 
 export default initialDhikrs
-
-// future data design for Version 2
-// {
-//     id: 1,
-//     name: "SubhanAllah",
-//     count: 0,
-//     lifetime: 0,
-//     target: 33,
-//     color: "#22c55e",
-//     icon: "🌿",
-//     isDefault: true,
-// }

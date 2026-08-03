@@ -33,7 +33,6 @@ img {
 }
 
 :root {
-    /* colors */
     --primary: #22c55e;
     --primary-hover: #16a34a;
 
@@ -48,21 +47,16 @@ img {
     --warning: #f59e0b;
     --danger: #ef4444;
 
-    /* card */
     --card-radius: 24px;
     --card-padding: 1.5rem;
     --card-shadow: 0 10px 30px rgba(0, 0, 0, .25);
 
-    /* buttons */
     --button-radius: 14px;
 
-    /* input */
     --input-radius: 12px;
 
-    /* animation */
     --transition: 0.3s ease;
 
-    /* spacing */
     --page-gap: 1.5rem;
 
     --space-xs: .5rem;

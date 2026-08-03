@@ -1,10 +1,8 @@
+import React from 'react'
 import styles from "./CountButton.module.css";
 import { motion } from "framer-motion";
 import { FaCheck } from "react-icons/fa";
 
-import React from 'react'
-
-// sending props here from the App.jsx </CountButton/>
 const CountButton = ({ onCount, isCompleted }) => {
     const handleClick = () => {
         onCount();

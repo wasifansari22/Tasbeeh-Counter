@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
 const CounterCircle = ({ count, target }) => {
-    // const percentage = Math.round((count / target) * 100);
     const percentage = target > 0 ? Math.min(Math.round((count / target) * 100), 100) : 0;
     const progress = Math.min(count / target, 1);
     const radius = 78;
@@ -19,7 +18,7 @@ const CounterCircle = ({ count, target }) => {
                 width="190"
                 height="190"
             >
-                {/* gradient definition */}
+
                 <defs>
                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#22c55e" />
@@ -27,7 +26,6 @@ const CounterCircle = ({ count, target }) => {
                     </linearGradient>
                 </defs>
 
-                {/* background circle */}
                 <circle
                     className={styles.bgCircle}
                     cx="95"
@@ -35,7 +33,6 @@ const CounterCircle = ({ count, target }) => {
                     r={radius}
                 />
 
-                {/* animated progress */}
                 <motion.circle
                     className={`${styles.progressCircle} ${isCompleted ? styles.completedRing : ""}`}
                     cx="95"
@@ -54,7 +51,6 @@ const CounterCircle = ({ count, target }) => {
 
             </svg>
 
-            {/* only the number stays inside the circle */}
             <motion.div
                 className={`${styles.content} ${isCompleted ? styles.completedContent : ""}`}
             >
@@ -76,7 +72,6 @@ const CounterCircle = ({ count, target }) => {
                 <span>/{target}</span>
             </motion.div>
 
-            {/* percentage goes below the circle */}
             <motion.p
                 className={styles.status}
                 key={Math.round(percentage)}

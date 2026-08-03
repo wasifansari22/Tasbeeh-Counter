@@ -1,12 +1,10 @@
 import styles from "./TargetCard.module.css";
 import { useEffect, useState } from "react";
 
-// canDecrease
 const TargetCard = ({ count, target, showToast, onIncrease, onDecrease, onTargetChange }) => {
     const [inputValue, setInputValue] = useState(target.toString());
     const percentage = target > 0 ? Math.min((count / target) * 100, 100) : 0;
 
-    // keep input synchronized with parent state
     useEffect(() => {
         setInputValue(target.toString());
     }, [target]);
@@ -14,14 +12,11 @@ const TargetCard = ({ count, target, showToast, onIncrease, onDecrease, onTarget
     const handleBlur = () => {
         const value = Number(inputValue);
 
-        // empty or invalid input
         if (inputValue === "" || value < 1) {
             setInputValue(target.toString());
             return;
         }
-        // onTargetChange(value);
 
-        // prevent target below completed count
         if (value < count) {
             showToast(`Your target must be at least ${count}.`);
             setInputValue(target.toString());

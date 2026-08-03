@@ -29,7 +29,6 @@ const dailyReminders = [
         reference: "Sahih al-Bukhari & Muslim",
         emoji: "💚",
     },
-    // more can be added
 ];
 
 

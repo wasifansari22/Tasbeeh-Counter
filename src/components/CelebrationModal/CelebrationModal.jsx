@@ -47,7 +47,7 @@ const CelebrationModal = ({ show, onClose, count, target, achievement }) => {
                                 duration: 0.3,
                             }}
                         >
-                            {/* close button */}
+
                             <button
                                 className={styles.closeButton}
                                 onClick={onClose}
@@ -59,7 +59,6 @@ const CelebrationModal = ({ show, onClose, count, target, achievement }) => {
                             <h3>{count} / {target}</h3>
                             <p>{randomMessage}</p>
 
-                            {/* more upgrade for celebration modal */}
                             {
                                 achievement && (
                                     <motion.div

@@ -1,6 +1,5 @@
 .card {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); */
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     background: rgba(255, 255, 255, .04);
@@ -28,7 +27,6 @@
     font-size: .9rem;
 }
 
-/* mobile view */
 @media (max-width: 480px) {
     .item p {
         color: #9ca3af;

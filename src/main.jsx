@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { DhikrProvider } from './context/DhikrContext.jsx'
 import { registerSW } from "virtual:pwa-register";
 
-// register the service worker
 registerSW({
     immediate: true,
 });
