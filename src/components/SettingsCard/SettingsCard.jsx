@@ -24,7 +24,7 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
     return (
         <>
             <section className={styles.card}>
-                <h3 className={styles.heading}>⚙️ Settings</h3>
+                <h3 className={styles.heading}>Settings</h3>
 
                 {/* vibrate */}
                 <div className={styles.settings}>

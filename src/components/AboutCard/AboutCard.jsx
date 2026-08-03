@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import styles from "./AboutCard.module.css";
-import { FaMosque } from 'react-icons/fa'
 
 // features
 const features = [
@@ -35,14 +34,11 @@ const AboutCard = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
         >
-            <div className={styles.iconWrapper}>
-                <FaMosque className={styles.icon} />
-            </div>
-            
+
             <div className={styles.header}>
-                {/* <div className={styles.logo}>🌙</div> */}
-                <h2>Tasbeeh Counter</h2>
-                <p>Dhikr Companion</p>
+                <h2>About Tasbeeh Counter</h2>
+                <p>Your digital companion for daily Dhikr</p>
+
                 <span className={styles.version}>
                     Version 1.0.0
                 </span>
@@ -80,10 +76,10 @@ const AboutCard = () => {
 
             {/* footer */}
             <div className={styles.footer}>
-                <p className={styles.dua}>🤲 May Allah accept your Dhikr. Ameen.</p>
-                <p>Made with ❤️ by</p>
-                <h4>Wasif Ansari</h4>
-                <span>© 2026</span>
+                <p className={styles.dua}> 🤲 May Allah accept your Dhikr. Ameen.</p>
+                <div className={styles.divider}></div>
+                <h4>Built with ❤️ by Mohammed Wasif</h4>
+                <p className={styles.copyright}> Version 1.0.0 • © 2026</p>
             </div>
         </motion.section>
     );
