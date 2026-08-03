@@ -14,6 +14,12 @@ const Celebration = ({ show }) => {
                 numberOfPieces={180}
                 recycle={false}
                 gravity={0.25}
+                style={{
+                    position: "fixed",
+                    inset: 0,
+                    pointerEvents: "none",
+                    zIndex: 9998,
+                }}
             />
         </div>
     )
