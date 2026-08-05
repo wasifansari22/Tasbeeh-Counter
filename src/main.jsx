@@ -7,7 +7,7 @@ import { DhikrProvider } from './context/DhikrContext.jsx'
 import { registerSW } from "virtual:pwa-register";
 
 registerSW({
-    immediate: true,
+  immediate: true,
 });
 
 createRoot(document.getElementById('root')).render(

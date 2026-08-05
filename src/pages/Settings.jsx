@@ -8,6 +8,8 @@ const Settings = (props) => {
                 settings={props.settings}
                 setSettings={props.setSettings}
                 onReset={props.onReset}
+                status={props.status}
+                installApp={props.installApp}
             />
         </>
     )

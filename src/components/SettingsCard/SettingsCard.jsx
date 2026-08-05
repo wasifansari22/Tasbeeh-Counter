@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import styles from "./SettingsCard.module.css";
 import ConfirmModal from "../ConfirmModal/ConfirmModal";
 import { motion } from "framer-motion";
-import useInstallPrompt from "../../hooks/useInstallPrompt";
 
-const SettingsCard = ({ settings, setSettings, onReset }) => {
-
-    const { status, installApp } = useInstallPrompt();
+const SettingsCard = ({ settings, setSettings, onReset, status, installApp }) => {
     const [showResetModal, setShowResetModal] = useState(false);
-
     const toggleSetting = (key) => {
         setSettings((prev) => ({
             ...prev,
@@ -122,10 +118,11 @@ const SettingsCard = ({ settings, setSettings, onReset }) => {
                             <p>Opening installation prompt...</p>
                         )}
                         {status === "installed" && (
-                            <p>✅ App is already installed.</p>
+                            <p style={{ color: "#22c55e" }}>✅ App is already installed.</p>
                         )}
                         {status === "unsupported" && (
-                            <p>Installation isn't available right now. Try to Refresh/Reload the page once.</p>
+                            <p>Installation isn't available right now. To install:
+                                Tap ⋮ in Chrome and choose Install app.</p>
                         )}
                     </div>
 

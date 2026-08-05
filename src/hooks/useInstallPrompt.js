@@ -5,27 +5,18 @@ const useInstallPrompt = () => {
     const [status, setStatus] = useState("checking");
 
     useEffect(() => {
-        console.log("Install hook mounted");
-
-        if (
-            window.matchMedia("(display-mode: standalone)").matches
-        ) {
+        if (window.matchMedia("(display-mode: standalone)").matches) {
             setStatus("installed");
             return;
         }
 
         const handleBeforeInstallPrompt = (event) => {
-            console.log("beforeinstallprompt fired");
-
             event.preventDefault();
-
             setDeferredPrompt(event);
             setStatus("available");
         };
 
         const handleAppInstalled = () => {
-            console.log("App Installed");
-
             setDeferredPrompt(null);
             setStatus("installed");
         };
@@ -40,9 +31,16 @@ const useInstallPrompt = () => {
             handleAppInstalled
         );
 
+        const timer = setTimeout(() => {
+            setStatus((current) =>
+                current === "checking"
+                    ? "unsupported"
+                    : current
+            );
+        }, 1500);
+
         return () => {
-            console.log("Install hook unmounted");
-            // clearTimeout(timer);
+            clearTimeout(timer);
             window.removeEventListener(
                 "beforeinstallprompt",
                 handleBeforeInstallPrompt
@@ -51,7 +49,7 @@ const useInstallPrompt = () => {
             window.removeEventListener(
                 "appinstalled",
                 handleAppInstalled
-            );  
+            );
         };
     }, []);
 
@@ -61,7 +59,6 @@ const useInstallPrompt = () => {
         }
 
         setStatus("installing");
-
         deferredPrompt.prompt();
 
         const { outcome } =
@@ -77,6 +74,10 @@ const useInstallPrompt = () => {
         setDeferredPrompt(null);
         return true;
     };
+
+    useEffect(() => {
+        console.log("Current install status:", status);
+    }, [status]);
 
     return {
         status,

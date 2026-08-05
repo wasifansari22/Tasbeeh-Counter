@@ -26,8 +26,12 @@ import Statistics from './pages/Statistics'
 import Settings from './pages/Settings'
 import BottomNavigation from './components/BottomNavigation/BottomNavigation'
 import About from './pages/About'
+import useInstallPrompt from './hooks/useInstallPrompt'
 
 const App = () => {
+    // installation
+    const { status, installApp } = useInstallPrompt();
+
     const [dhikrs, setDhikrs] = useLocalStorage(
         "dhikrs", initialDhikrs
     );
@@ -367,6 +371,8 @@ const App = () => {
                             settings={settings}
                             setSettings={setSettings}
                             onReset={handleResetAll}
+                            status={status}
+                            installApp={installApp}
                         />}
                     />
 
