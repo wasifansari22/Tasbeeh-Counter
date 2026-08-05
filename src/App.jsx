@@ -29,7 +29,7 @@ import About from './pages/About'
 import useInstallPrompt from './hooks/useInstallPrompt'
 
 const App = () => {
-    // installation
+    
     const { status, installApp } = useInstallPrompt();
 
     const [dhikrs, setDhikrs] = useLocalStorage(

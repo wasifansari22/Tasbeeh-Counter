@@ -22,7 +22,6 @@ const SettingsCard = ({ settings, setSettings, onReset, status, installApp }) =>
             <section className={styles.card}>
                 <h3 className={styles.heading}>⚙️ Settings</h3>
 
-                {/* vibrate */}
                 <div className={styles.settings}>
                     <div className={styles.info}>
                         <h4>📳 Vibrate on Tap</h4>
@@ -80,7 +79,7 @@ const SettingsCard = ({ settings, setSettings, onReset, status, installApp }) =>
                     <label className={styles.switch}>
                         <input
                             type="checkbox"
-                            // checked={settings.sound}
+
                             checked={false}
                             onChange={() => toggleSetting("sound")}
                         />
@@ -97,7 +96,7 @@ const SettingsCard = ({ settings, setSettings, onReset, status, installApp }) =>
                     <label className={styles.switch}>
                         <input
                             type="checkbox"
-                            // checked={settings.darkTheme}
+
                             checked={false}
                             onChange={() => toggleSetting("darkTheme")}
                         />

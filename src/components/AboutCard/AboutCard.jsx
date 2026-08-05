@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from "framer-motion";
 import styles from "./AboutCard.module.css";
 
-// features
 const features = [
     {
         icon: "📿",
