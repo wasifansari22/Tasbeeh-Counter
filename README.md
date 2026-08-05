@@ -1,16 +1,136 @@
-# React + Vite
+# 📿 Tasbeeh Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **Progressive Web App (PWA)** built with **React** that helps Muslims keep track of their daily Dhikr through an elegant and distraction-free interface.
 
-Currently, two official plugins are available:
+Designed with a clean UI, smooth animations, achievements, streak tracking, and offline support to encourage consistency in remembrance of Allah.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 📿 Multiple Dhikr counters
+* 🎯 Custom target for each Dhikr
+* 📊 Live progress tracking
+* 🔥 Daily streak tracking
+* 🏆 Achievement system
+* 🎉 Celebration effects when goals are completed
+* 🔔 Daily reminder
+* 📱 Installable as a Progressive Web App (PWA)
+* 💾 Local Storage persistence
+* 📈 Lifetime statistics
+* ⚙️ User settings
+* 📱 Fully responsive design
+* ✨ Smooth animations with Framer Motion
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+* React
+* React Router
+* CSS Modules
+* Framer Motion
+* React Icons
+* Vite
+* Vite PWA Plugin
+* Local Storage API
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/wasifansari22/Tasbeeh-Counter.git
+```
+
+Go into the project folder
+
+```bash
+cd Tasbeeh-Counter
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## 📱 Progressive Web App
+
+This application supports Progressive Web App features including:
+
+* Install on desktop and mobile
+* Offline support (after deployment)
+* Home screen installation
+* App-like experience
+* Automatic service worker updates
+
+> Note: Some mobile browsers may require installing the app through the browser menu ("Install app") if the install prompt is not shown automatically.
+
+---
+
+## 🎯 Future Improvements (Version 2)
+
+* 🌙 Functional Dark Mode
+* 🔊 Sound Effects
+* ☁️ Cloud Sync
+* 👤 User Authentication
+* 📅 Daily Notifications
+* 📊 Advanced Analytics
+* 🌍 Multiple Languages
+* 📤 Export Statistics
+* 🎨 Additional Themes
+
+---
+
+## 📸 Screenshots
+
+> Screenshots will be added soon.
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Wasif Ansari**
+
+GitHub: [@wasifansari22](https://github.com/wasifansari22)
+
+If you enjoyed this project, consider giving it a ⭐ on GitHub.
+
+May Allah accept our Dhikr and keep us consistent. Ameen. 🤲
