@@ -107,7 +107,29 @@ This application supports Progressive Web App features including:
 
 ## 📸 Screenshots
 
-> Screenshots will be added soon.
+### 🏠 Home Page
+
+![Home Page](src/assets/screenshots/home.png)
+
+### 📊 Statistics Page
+
+![Statistics Page](src/assets/screenshots/statistics.png)
+
+### ⚙️ Settings Page
+
+![Settings Page](src/assets/screenshots/settings.png)
+
+### ℹ️ About Page
+
+![About Page](src/assets/screenshots/about.png)
+
+### 🏆 Achievements
+
+![Achievements](src/assets/screenshots/achievements.png)
+
+### 🎊 Celebration
+
+![Celebration](src/assets/screenshots/celebration.png)
 
 ---
 
