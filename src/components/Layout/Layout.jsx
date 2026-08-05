@@ -1,4 +1,4 @@
-import './layout.css'
+import './Layout.css'
 
 import React from 'react'
 
