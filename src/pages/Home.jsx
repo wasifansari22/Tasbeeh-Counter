@@ -14,18 +14,12 @@ const Home = (props) => {
     const [showReminder, setShowReminder] = useState(false);
     useEffect(() => {
         if (!props.settings.dailyReminder) return;
-        const today = new Date().toDateString();
-        const lastShown = localStorage.getItem("dailyReminderDate");
+        setShowReminder(true);
+        const timer = setTimeout(() => {
+            setShowReminder(false);
+        }, 10000);
 
-        if (lastShown !== today) {
-            setShowReminder(true);
-            localStorage.setItem("dailyReminderDate", today);
-
-            const timer = setTimeout(() => {
-                setShowReminder(false);
-            }, 5000);
-            return () => clearTimeout(timer);
-        }
+        return () => clearTimeout(timer);
     }, [props.settings.dailyReminder]);
 
     return (
