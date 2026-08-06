@@ -12,10 +12,20 @@ import styles from "./Home.module.css";
 
 const Home = (props) => {
     const [showReminder, setShowReminder] = useState(false);
+    
     useEffect(() => {
         if (!props.settings.dailyReminder) return;
+
+        const alreadyShown = sessionStorage.getItem("dailyReminderShown");
+
+        if (alreadyShown) return;
+
+        sessionStorage.setItem("dailyReminderShown", "true");
+
         setShowReminder(true);
+
         const timer = setTimeout(() => {
+            console.log("Timer Finished");
             setShowReminder(false);
         }, 10000);
 
