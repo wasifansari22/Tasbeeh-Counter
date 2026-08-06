@@ -95,6 +95,7 @@ This application supports Progressive Web App features including:
 
 * 🌙 Functional Dark Mode
 * 🔊 Sound Effects
+* 📿 Add Custom Dhikr
 * ☁️ Cloud Sync
 * 👤 User Authentication
 * 📅 Daily Notifications
