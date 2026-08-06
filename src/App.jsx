@@ -64,22 +64,16 @@ const App = () => {
     );
 
     const [newAchievement, setNewAchievement] = useState(null);
-
     const [celebrate, setCelebrate] = useState(false);
-
     const [showCelebration, setShowCelebration] = useState(false);
-
     const toastTimeout = useRef(null);
-
     const hasCelebrated = useRef(false);
 
     useEffect(() => {
         if (!celebrate) return;
-
         const timer = setTimeout(() => {
             setCelebrate(false);
         }, 5000);
-
         return () => clearTimeout(timer);
     }, [celebrate]);
 
@@ -120,7 +114,6 @@ const App = () => {
             if (unlockedAchievements.includes(achievement.id)) {
                 return;
             }
-
             if (achievement.condition(stats)) {
                 setUnlockedAchievements((prev) => [
                     ...prev,
@@ -135,17 +128,14 @@ const App = () => {
     const activeDhikr = dhikrs.find(
         (dhikr) => dhikr.id === activeDhikrId
     );
-
     const totalCount = dhikrs.reduce(
         (sum, dhikr) => sum + dhikr.count,
         0
     );
-
     const lifetimeCount = dhikrs.reduce(
         (sum, dhikr) => sum + (dhikr.lifetime || 0),
         0
     );
-
     const today = new Date();
     const reminderIndex = today.getDate() % dailyReminders.length;
     const todayReminder = dailyReminders[reminderIndex];
@@ -168,11 +158,9 @@ const App = () => {
             });
             return;
         }
-
         if (streak.lastCompleted === today) {
             return;
         }
-
         const yesterday = new Date();
         yesterday.setDate(yesterday.getDate() - 1);
         const yesterdayString = yesterday.toISOString().split("T")[0];
@@ -237,20 +225,16 @@ const App = () => {
                 ...dhikr,
             }))
         );
-
         setUnlockedAchievements([]);
-
         setStreak({
             current: 0,
             best: 0,
             lastCompleted: null,
         });
-
         showToast("All progress has been reset.", "success");
     };
 
     const updateTarget = (newTarget) => {
-
         setDhikrs((prevDhikrs) =>
             prevDhikrs.map((dhikr) => {
                 if (dhikr.id !== activeDhikrId) {
@@ -337,11 +321,11 @@ const App = () => {
     return (
         <>
             <Layout>
+                <Toast show={toast.show} message={toast.message} type={toast.type} />
                 <Routes>
                     <Route
                         path="/"
                         element={<Home
-                            toast={toast}
                             celebrate={celebrate}
                             dhikrs={dhikrs}
                             activeDhikr={activeDhikr}

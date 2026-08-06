@@ -5,7 +5,6 @@ import CounterCircle from "../components/CounterCircle/CounterCircle";
 import TargetCard from "../components/TargetCard/TargetCard";
 import CountButton from "../components/CountButton/CountButton";
 import ResetButton from "../components/ResetButton/ResetButton";
-import Toast from "../components/Toast/Toast";
 import Celebration from "../components/Celebration/Celebration";
 import CelebrationModal from "../components/CelebrationModal/CelebrationModal";
 import DailyReminder from '../components/DailyReminder/DailyReminder';
@@ -40,7 +39,6 @@ const Home = (props) => {
             )}
 
             <Celebration show={props.celebrate} />
-            <Toast show={props.toast.show} message={props.toast.message} type={props.toast.type} />
             <Header />
             <DhikrTabs dhikrs={props.dhikrs} activeDhikrId={props.activeDhikrId} onChangeDhikr={props.setActiveDhikrId} />
             <CounterCircle count={props.activeDhikr.count} target={props.activeDhikr.target} />
