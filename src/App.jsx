@@ -15,7 +15,6 @@ import { getToday, getDayDifference } from './utils/streakUtils'
 import achievements from './data/achievements'
 import AchievementCard from './components/AchievementCard/AchievementCard'
 import useLocalStorage from './hooks/useLocalStorage'
-import CelebrationModal from './components/CelebrationModal/CelebrationModal'
 import dailyReminders from './data/dailyReminders'
 import DailyReminder from './components/DailyReminder/DailyReminder'
 import defaultSettings from './data/defaultSettings'
@@ -29,7 +28,7 @@ import About from './pages/About'
 import useInstallPrompt from './hooks/useInstallPrompt'
 
 const App = () => {
-    
+
     const { status, installApp } = useInstallPrompt();
 
     const [dhikrs, setDhikrs] = useLocalStorage(
@@ -73,6 +72,16 @@ const App = () => {
     const toastTimeout = useRef(null);
 
     const hasCelebrated = useRef(false);
+
+    useEffect(() => {
+        if (!celebrate) return;
+
+        const timer = setTimeout(() => {
+            setCelebrate(false);
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    }, [celebrate]);
 
     const showToast = (message, type = "info") => {
         if (toastTimeout.current) {
@@ -202,7 +211,13 @@ const App = () => {
         const newCount = currentDhikr.count + 1;
         if (newCount === currentDhikr.target) {
             updateStreak();
-            setShowCelebration(true);
+
+            if (settings.celebration) {
+                setCelebrate(true);
+                setShowCelebration(true);
+            } else {
+                showToast("🎉 Target completed!", "success");
+            }
         }
 
         setDhikrs((prevDhikrs) =>
@@ -217,21 +232,20 @@ const App = () => {
     }
 
     const handleResetAll = () => {
-        setDhikrs((prevDhikrs) =>
-            prevDhikrs.map((dhikr) => (
-                {
-                    ...dhikr,
-                    count: 0,
-                    lifetime: 0,
-                }
-            ))
+        setDhikrs(
+            initialDhikrs.map((dhikr) => ({
+                ...dhikr,
+            }))
         );
+
         setUnlockedAchievements([]);
+
         setStreak({
             current: 0,
             best: 0,
             lastCompleted: null,
         });
+
         showToast("All progress has been reset.", "success");
     };
 
@@ -314,13 +328,6 @@ const App = () => {
                 "🤲 Alhamdulillah! Target Completed!",
                 "celebration",
             );
-
-            if (settings.celebration) {
-                setCelebrate(true);
-                setTimeout(() => {
-                    setCelebrate(false);
-                }, 5000);
-            }
         }
         if (activeDhikr.count < activeDhikr.target) {
             hasCelebrated.current = false;

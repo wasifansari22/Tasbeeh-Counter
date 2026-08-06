@@ -15,13 +15,19 @@ const CelebrationModal = ({ show, onClose, count, target, achievement }) => {
         <AnimatePresence>
             {show && (
                 <>
-                    <Confetti
+                    {/* <Confetti
                         width={window.innerWidth}
                         height={window.innerHeight}
                         recycle={false}
                         numberOfPieces={180}
                         gravity={0.25}
-                    />
+                        style={{
+                            position: "fixed",
+                            inset: 0,
+                            pointerEvents: "none",
+                            zIndex: 9998,
+                        }}
+                    /> */}
 
                     <motion.div
                         className={styles.overlay}
