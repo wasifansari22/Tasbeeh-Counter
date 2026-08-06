@@ -26,6 +26,7 @@ import Settings from './pages/Settings'
 import BottomNavigation from './components/BottomNavigation/BottomNavigation'
 import About from './pages/About'
 import useInstallPrompt from './hooks/useInstallPrompt'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 const App = () => {
 
@@ -321,6 +322,7 @@ const App = () => {
     return (
         <>
             <Layout>
+                <ScrollToTop/>
                 <Toast show={toast.show} message={toast.message} type={toast.type} />
                 <Routes>
                     <Route
